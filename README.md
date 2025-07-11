@@ -31,6 +31,13 @@ A popup will let you change the task text.
 Click the 🗑️ **Delete** icon beside any task to remove it.
 
 ![Delete Task](delete.png)
+### 5 Complete a Task
+
+Click the checkbox beside a task to mark it as **completed**.  
+Completed tasks appear with a line-through style or a different color (depending on your design).
+
+![Complete Task](complete.png)
+
 
 ## Technologies Used
 
