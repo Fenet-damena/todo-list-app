@@ -78,3 +78,19 @@ ul#task-list li {
     align-items: center;
     
 }
+.task-text {
+    display:  flex;
+    align-items: center;
+    gap: 1px;
+
+}
+.task-text input[type="checkbox"] {
+    transform:scale(1.2);
+}
+ .actions {
+    margin-left: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+ }
