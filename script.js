@@ -38,6 +38,19 @@ function renderTasks() {
     const list = document.getElementById("task-list");
     list.innerHTML = "";
 
+if (tasks.length === 0) {
+    const li = document.createElement("li");
+    li.textContent = "No task added";
+    li.style.textAlign = "center";
+    li.style.color = "gray";
+    list.appendChild(li);
+    document.getElementById("total").textContent = "0";
+    document.getElementById("completed").textContent = "0";
+    document.getElementById("pending").textContent = "0";
+    return;
+}
+
+
     const filteredTasks = tasks.filter(task => {
         if (filter === 'all') return true;
         return filter === 'completed' ? task.completed : !task.completed;
