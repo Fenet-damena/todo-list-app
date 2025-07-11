@@ -31,3 +31,11 @@ A popup will let you change the task text.
 Click the 🗑️ **Delete** icon beside any task to remove it.
 
 ![Delete Task](delete.png)
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+## Author
+ Fenet Damena
