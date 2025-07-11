@@ -1,3 +1,19 @@
+# Simple To-Do List App
+
+A clean and minimal to-do list web application built using ** HTML, CSS, and JavaScript**. It helps you manage your daily activities by allowing you to add, edit, delete, complete, and filter tasks easily.
+
+
+##  Features
+
+- ✅ Add new tasks
+- ✏️ Edit existing tasks
+- 🗑️ Delete tasks
+- ✔️ Mark tasks as completed
+- 🔍 Filter tasks: All / Pending / Completed
+- 📊 Real-time task counters: Total, Completed, Pending
+- 💬 Message shown when no tasks exist
+
+
 ## 📸 Screenshots
 
 ### 1 No Task Available
