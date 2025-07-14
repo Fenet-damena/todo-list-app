@@ -54,11 +54,16 @@ Completed tasks appear with a line-through style or a different color (depending
 
 ![Complete Task](complete.png)
 
+### 6 Filter a Task
+![Complete Task](filter.png)
+
+
 
 ## Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript
+- LocalStorage for persistence
 ## Author
  Fenet Damena
