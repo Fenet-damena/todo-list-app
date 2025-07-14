@@ -71,50 +71,46 @@ function renderTasks() {
     li.style.textAlign = "center";
     li.style.color = "gray";
     list.appendChild(li);
-  } else {
-    filteredTasks.forEach((task, i) => {
-      const li = document.createElement("li");
-
-      const taskSection = document.createElement("div");
-      taskSection.className = "task-text";
-
-      const checkbox = document.createElement('input');
-      checkbox.type = 'checkbox';
-      checkbox.checked = task.completed;
-      checkbox.onclick = () => toggleTask(tasks.indexOf(task));
-
-      const span = document.createElement("span");
-      span.textContent = task.text;
-      if (task.completed) span.style.textDecoration = "line-through";
-
-      taskSection.appendChild(checkbox);
-      taskSection.appendChild(span);
-
-      const actions = document.createElement("div");
-      actions.className = "actions";
-
-      const editButton = document.createElement("button");
-      editButton.innerHTML = "✏️";
-      editButton.onclick = () => editTask(tasks.indexOf(task));
-
-      const deleteButton = document.createElement("button");
-      deleteButton.innerHTML = "🗑️";
-      deleteButton.onclick = () => deleteTask(tasks.indexOf(task));
-
-      actions.appendChild(editButton);
-      actions.appendChild(deleteButton);
-
-      li.appendChild(taskSection);
-      li.appendChild(actions);
-      list.appendChild(li);
-    });
+    return;
   }
 
-  document.getElementById("total").textContent = tasks.length;
-  document.getElementById("completed").textContent = tasks.filter(t => t.completed).length;
-  document.getElementById("pending").textContent = tasks.filter(t => !t.completed).length;
+  filteredTasks.forEach((task, i) => {
+    const li = document.createElement("li");
+
+    const taskSection = document.createElement("div");
+    taskSection.className = "task-text";
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = task.completed;
+    checkbox.onclick = () => toggleTask(tasks.indexOf(task));
+
+    const span = document.createElement("span");
+    span.textContent = task.text;
+    if (task.completed) span.style.textDecoration = "line-through";
+
+    taskSection.appendChild(checkbox);
+    taskSection.appendChild(span);
+
+    const actions = document.createElement("div");
+    actions.className = "actions";
+
+    const editButton = document.createElement("button");
+    editButton.innerHTML = "✏️";
+    editButton.onclick = () => editTask(tasks.indexOf(task));
+
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "🗑️";
+    deleteButton.onclick = () => deleteTask(tasks.indexOf(task));
+
+    actions.appendChild(editButton);
+    actions.appendChild(deleteButton);
+
+    li.appendChild(taskSection);
+    li.appendChild(actions);
+    list.appendChild(li);
+  });
 }
 
-// initial load
 setActiveFilter(filter);
 renderTasks();
